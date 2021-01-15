@@ -73,7 +73,6 @@ public class BinaryHeapOption {
             childIndex  = parentIndex;
             //父节点下标重新赋值 指向下一个父节点下标
             parentIndex = (parentIndex - 1)/2;
-            Log.e("==========","tiaozjheng");
         }
         //一次二叉堆上浮结束 重新对子节点赋值
         array[childIndex]=temp;

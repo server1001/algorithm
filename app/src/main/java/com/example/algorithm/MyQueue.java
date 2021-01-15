@@ -1,5 +1,7 @@
 package com.example.algorithm;
 
+import android.util.Log;
+
 /**
  * 循环队列
  */
@@ -15,7 +17,7 @@ public class MyQueue {
     }
 
     public void enQueue(int element) throws Exception {
-        if ((rear+1)%array.length==0){
+        if ((rear+1)%array.length==front){
             throw  new Exception("队列已满");
         }
         array[rear]=element;
@@ -30,6 +32,12 @@ public class MyQueue {
         int deQueue=array[front];
         front=(front+1)%array.length;
         return deQueue;
+    }
+
+    public void sysout(){
+        for (int i = 0; i < array.length; i++) {
+            Log.e("==========","array     "+array[i]);
+        }
     }
 
 }
